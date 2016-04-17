@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "OpenGrADS",
+    "description": "Opening GrADS to a World of Extensions"
+  },
+  "plugins": {
+    "metalsmith-markdown": {},
+    "metalsmith-permalinks": {
+      "pattern": ":title"
+    },
+    "metalsmith-layouts": {
+      "engine": "handlebars"
+    }
+  }
+}
