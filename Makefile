@@ -1,10 +1,14 @@
 
 build: node_modules
 	node_modules/.bin/metalsmith
-	cp build/home/index.html build/index.html
 	cp -r static/* build/
-	sudo cp -r build/* /var/www/html
-	sudo chmod -R 755 /var/www/html/*
+
+	cp build/home/index.html build/index.html
+	cp build/manual/index.html build/doc/
+
+	#sudo cp -r build/* /var/www/html
+	#sudo chmod -R 755 /var/www/html/*
+	tar cvzf build.tar.gz build
 
 node_modules: package.json
 	npm install
